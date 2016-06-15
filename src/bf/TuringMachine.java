@@ -16,7 +16,7 @@ public class TuringMachine {
         value = new byte[MEM_SIZE];
         type = new char[MEM_SIZE];
         for (int i = 0; i != MEM_SIZE; ++i) {
-            type[i] = 0;
+            type[i] = 'b';
         }
     }
 
