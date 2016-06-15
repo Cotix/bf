@@ -46,4 +46,8 @@ public class State {
         return machine.getValue();
     }
 
+    public char getType() {
+        return machine.getType();
+    }
+
 }

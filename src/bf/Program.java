@@ -53,6 +53,7 @@ public class Program {
                 char s = type.charAt(i);
                 if (functions.containsKey(Character.toString(s)+op)) {
                     functionScope += op;
+                    System.out.println("Function found: " + Character.toString(s)+op);
                     execute(functions.get(Character.toString(s)+op));
                     functionScope = functionScope.substring(0,functionScope.length()-1);
                     continue step;
@@ -101,7 +102,7 @@ public class Program {
                     break;
 
                 case '[':
-                    if (state.getValue() == 0) {
+                    if (state.getType() == 'b' && state.getValue() == 0) {
                         int c = 1;
                         int i;
                         for (i = ptr; i != code.length(); ++i) {
