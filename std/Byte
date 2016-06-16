@@ -1,0 +1,10 @@
+---------------------------------------------------B(Byte)-----------------------------------------------------------------------------------
+:B:^*b&:                       # Defines a type B consisting of 1 byte
+:B+:*+&:                       # Defines incrementing a B with one as the function +
+:Bp:>*[&<*+&>*-]&<:            # Defines an add operation of B1 + B2 = B3 on tape [(->)B1|B2] => [(->)B3|null] as function p
+:Bm:>[*-&<*-&>]^<:             # Defines a minus operation of B1 - B2 = B3 on tape [(->B1)|B2)] => [(->)B3|null] as function m
+:BM:>^B<*[&>*+&<*-]&>:         # Defines a move operation of B1 = B2 on tape [(->)B1|unk] => [null|(->)B2]
+:BC:>^B>^B<<*[&>*+&>*+&<<*-]&: # Defines a copy operation of B1 = B2 = B3 on tape [(->)B1|unk|unk) => [(->)null|B2|B3]
+:BS:>>^B<M<<M>*[&<<*+&>>*-]&>: # Defines a swap operation of B1 and B2 on tape [(->)B1|B2|unk] => [B2|(->)B1|null]
+
+

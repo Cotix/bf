@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Stack;
-import java.util.stream.Collector;
 
 /**
  * Created by cotix on 14-6-16.
